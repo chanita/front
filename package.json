@@ -1,7 +1,7 @@
 {
   "version": "0.0.0",
   "private": true,
-  "name": "chanita-front",
+  "name": "front",
   "description": "frontend",
   "repository": "https://github.com/chanita/front.git",
   "license": "MIT",
@@ -17,6 +17,7 @@
     "shelljs": "*"
   },
   "scripts": {
+    "postinstall": "bower install",
 
     "prestart": "npm install",
     "start": "http-server -a 0.0.0.0 -p 8000",

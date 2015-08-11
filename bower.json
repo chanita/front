@@ -1,0 +1,17 @@
+{
+  "name": "front",
+  "description": "frontend",
+  "version": "0.0.0",
+  "homepage": "https://github.com/chanita/front.git",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.4.4",
+    "angular-mocks": "1.4.4",
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.5",
+    "angular-route": "1.4.x",
+    "angular-resource": "1.4.x",
+    "angular-animate": "1.4.x"
+  }
+}

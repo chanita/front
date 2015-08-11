@@ -14,7 +14,8 @@
     "http-server": "^0.6.1",
     "tmp": "*",
     "bower": "^1.4.1",
-    "shelljs": "*"
+    "shelljs": "*",
+    "grunt-cli": "*"
   },
   "scripts": {
     "postinstall": "bower install",

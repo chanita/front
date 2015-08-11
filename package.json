@@ -1,7 +1,7 @@
 {
   "version": "0.0.0",
   "private": true,
-  "name": "front",
+  "name": "chanita-front",
   "description": "frontend",
   "repository": "https://github.com/chanita/front.git",
   "license": "MIT",

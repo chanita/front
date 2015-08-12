@@ -133,7 +133,7 @@ module.exports = function (grunt) {
         preserveComments: 'some'
       },
       core: {
-        src: '<%= concat.bootstrap_theme01.dest %>',
+        src: '<%= concat.bootstrap.dest %>',
         dest: 'dist/js/<%= pkg.name %>.min.js'
       },
       customize: {
@@ -162,7 +162,7 @@ module.exports = function (grunt) {
           sourceMapURL: '<%= pkg.name %>.css.map',
           sourceMapFilename: 'dist/css/<%= pkg.name %>.css.map'
         },
-        src: 'less/bootstrap_theme01.less',
+        src: 'less/bootstrap.less',
         dest: 'dist/css/<%= pkg.name %>.css'
       },
       compileTheme: {
@@ -210,8 +210,8 @@ module.exports = function (grunt) {
         csslintrc: 'less/.csslintrc'
       },
       dist: [
-        'dist/css/bootstrap_theme01.css',
-        'dist/css/bootstrap_theme01-theme.css'
+        'dist/css/bootstrap.css',
+        'dist/css/bootstrap-theme.css'
       ],
       examples: [
         'docs/examples/**/*.css'
@@ -411,7 +411,7 @@ module.exports = function (grunt) {
     compress: {
       main: {
         options: {
-          archive: 'bootstrap_theme01-<%= pkg.version %>-dist.zip',
+          archive: 'bootstrap-<%= pkg.version %>-dist.zip',
           mode: 'zip',
           level: 9,
           pretty: true
@@ -421,7 +421,7 @@ module.exports = function (grunt) {
             expand: true,
             cwd: 'dist/',
             src: ['**'],
-            dest: 'bootstrap_theme01-<%= pkg.version %>-dist'
+            dest: 'bootstrap-<%= pkg.version %>-dist'
           }
         ]
       }
@@ -449,7 +449,7 @@ module.exports = function (grunt) {
   // Skip core tests if running a different subset of the test suite
   if (runSubset('core') &&
       // Skip core tests if this is a Savage build
-      process.env.TRAVIS_REPO_SLUG !== 'twbs-savage/bootstrap_theme01') {
+      process.env.TRAVIS_REPO_SLUG !== 'twbs-savage/bootstrap') {
     testSubtasks = testSubtasks.concat(['dist-css', 'dist-js', 'csslint:dist', 'test-js', 'docs']);
   }
   // Skip HTML validation if running a different subset of the test suite
@@ -499,7 +499,7 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('commonjs', 'Generate CommonJS entrypoint module in dist dir.', function () {
-    var srcFiles = grunt.config.get('concat.bootstrap_theme01.src');
+    var srcFiles = grunt.config.get('concat.bootstrap.src');
     var destFilepath = 'dist/js/npm.js';
     generateCommonJSModule(grunt, srcFiles, destFilepath);
   });

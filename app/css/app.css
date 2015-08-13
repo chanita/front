@@ -1,0 +1,12 @@
+.author-box{
+  border-color: #DDD;
+  border-width: 1px;
+  border-radius: 4px 4px 0 0;
+  border-style: solid;
+  padding: 15px 10px;
+  margin-top: 10px;
+}
+
+.medium-light{
+    color: #868061;
+}
